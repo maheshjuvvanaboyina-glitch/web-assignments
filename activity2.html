@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login and Registration</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial;background:#e0e7ff;min-height:100vh;display:flex;justify-content:center;align-items:center}
+.container{background:white;padding:30px;width:90%;max-width:380px;border-radius:12px;box-shadow:0 5px 20px #aaa}
+h1{text-align:center;color:#4338ca}
+input{width:100%;padding:12px;margin:10px 0;border:1px solid #ccc;border-radius:6px}
+input:focus{outline:2px solid #6366f1;border-color:#6366f1}
+button{width:100%;padding:12px;background:#4338ca;color:white;border:0;border-radius:6px;cursor:pointer;margin-top:10px}
+button:hover{background:#312e81}
+p{text-align:center;color:#555}
+a{color:#4338ca}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Create Account</h1>
+<form onsubmit="event.preventDefault();alert('Registration submitted!')">
+<label for="name">Full Name</label>
+<input id="name" type="text" placeholder="Enter your name" required>
+<label for="email">Email Address</label>
+<input id="email" type="email" placeholder="Enter your email" required>
+<label for="password">Password</label>
+<input id="password" type="password" placeholder="Enter password" minlength="6" required>
+<label for="confirm">Confirm Password</label>
+<input id="confirm" type="password" placeholder="Confirm password" minlength="6" required>
+<button type="submit">Register</button>
+</form>
+<p>Already have an account?</p>
+<button onclick="document.getElementById('login').hidden=false">Login</button>
+<form id="login" hidden onsubmit="event.preventDefault();alert('Demo login submitted!')">
+<h2>Login</h2>
+<label for="loginEmail">Email</label>
+<input id="loginEmail" type="email" required>
+<label for="loginPassword">Password</label>
+<input id="loginPassword" type="password" required>
+<button type="submit">Sign In</button>
+</form>
+<p><a href="#forgot">Forgot Password?</a></p>
+</div>
+</body>
+</html>
